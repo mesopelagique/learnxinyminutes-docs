@@ -1,0 +1,71 @@
+---
+language: 4D
+contributors:
+    - ["mesopelagique", "https://github.com/mesopelagique"]
+filename: learn4d.4dm
+---
+
+The 4D language is the built-in language for [4D RAD](https://fr.4d.com/)
+
+```4dm
+  // Single-line comments start with //
+/*
+	Multi-line comments look like this.
+*/
+
+/************************************
+	 * Types & Variables
+*/
+
+  // Variables begin with the $ symbol.
+  // A valid variable name starts with a letter, numbers or underscore,
+  // followed by any number of letters, numbers, or underscores.
+
+  // Boolean
+$boolean:=True
+$boolean:=False
+
+  // Integers
+$int1:=12  // => 12
+$int2:=-12  // => -12
+
+  // Reals
+$float:=1.234
+$float:=0.0000000007
+
+  // Arithmetic
+$sum:=1+1  // 2
+$difference:=2-1  // 1
+$product:=2*2  // 4
+$quotient:=2/1  // 2
+
+$number:=0
+$number:=$number+1  // Increment $number by 1
+
+  // Strings should be enclosed in double quotes
+$string:="String"
+
+  // String concatenation is done with +
+$newString:="a string"+" to "+"concatenate"+$string
+
+/********************************
+ * Collection
+ */
+
+// Collections are ordered lists of values of similar or mixed types (text, number, object, boolean, collection, or null
+$collection:=New collection("One";"Two";"Three")
+
+$first:=$collection[0] // => "One"
+
+// Add an element to the end of a collection
+$collection.push("Four")
+
+// Remove an element
+$collection.remove(3)
+
+```
+
+
+### Further Reading
+
+* [Developper documentations](https://developer.4d.com/docs)
